@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Soccer Player Page</title>
+</head>
+<body>
+<h1>Soccer Player List</h1>
+<h2 th:text="${'Hello : ' + player.firstName}"></h2>
+<ul>
+    First Name :<h3 th:text="${player.LirstName}"></h3>
+    Last Name  :<h3 th:text="${player.LastName}"></h3>
+    Player Age :<h3 th:text="${player.age}"></h3>
+
+    <h3 th:text="${player.age >30 ? 'Old' : 'Young'}"></h3>
+
+
+
+</ul>
+
+<div>
+    <span th:if="${player.lastName == 'Yalcin'}">Hey Sergen</span>
+    <span th:unless="${player.lastName == 'Yalcin'}">Hey Player</span>
+</div>
+<br>
+<a th:href="@{player}">Players</a>
+<br>
+
+<a th:href="@{http://google.com}">Google</a>
+
+</body>
+</html>

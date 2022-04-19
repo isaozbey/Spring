@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Soccer Player Page</title>
+    <link th:href="@{/css/custom.css}" rel="stylesheet", media="screen">
+</head>
+<body>
+<h1>Soccer Player List</h1>
+<ul>
+
+<li th:each="player : ${players}" th:text="${player.firstName + ' '+ player.lastName}"></li>
+
+<br>
+<br>
+<br>
+<br>
+
+<table class="customDesign">
+    <thead>
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Age</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+    <tr th:each="player : ${players}">
+        <td th:text="${player.firstName}"></td>
+        <td th:text="${player.LastName}"></td>
+        <td th:text="${player.age}"></td>
+    </tr>
+
+    </tbody>
+
+</table>
+
+    <div class="myDesign" th:replace="/fragments/footer :: footer-fixed">
+
+    </div>
+
+
+</body>
+
+
+</html>
