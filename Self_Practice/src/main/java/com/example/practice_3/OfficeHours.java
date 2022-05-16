@@ -1,0 +1,11 @@
+package com.example.practice_3;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class OfficeHours {
+
+    public int getHours(){
+        return 5;
+    }
+}

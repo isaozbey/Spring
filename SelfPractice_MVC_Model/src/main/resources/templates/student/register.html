@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2 th:text="${'Hello '+ students.get(0).firstName}">Welcome to Registration</h2>
+
+<a th:href="@{http://google.com}">Google</a>
+
+<a th:href="@{/student2/welcome}">Welcome</a><br>
+<a th:href="@{/student2/welcome(paramm=${students.get(0).firstName})}">Welcome-2</a><br>
+<!--<h2 th:text="${param}"></h2>-->
+
+
+</body>
+</html>
