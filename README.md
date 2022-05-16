@@ -1,2 +1,2 @@
-                           CYDEO JAVA DEVELOPER PROGRAM
+                            JAVA DEVELOPER PROGRAM
 Spring Framework
